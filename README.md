@@ -1,5 +1,9 @@
 ### SYNCHRONOUS-UP-COUNTER
 
+EXP=11
+
+DATE-10-12-2024
+
 **AIM:**
 
 To implement 4 bit synchronous up counter and validate functionality.
@@ -30,17 +34,60 @@ However, the remaining flip-flops should be made ready to toggle only when all l
 
 /* write all the steps invloved */
 
+1.Type the Verilog program in Quartus Prime to implement the 4 bit synchronous upcounter and validate functionality.
+
+2.Compile and run the program to ensure the design is error-free.
+
+3.Generate the RTL schematic to visualize the cascading D flip-flop connections and save it for documentation.
+
+4.Create nodes for the serial input (SI), clock (CLK), and serial output (SO) to observe the shifting process during simulation.
+
+5.Simulate the design for different input serial data patterns and observe the timing diagrams.
+
+
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. */
 
-Developed by: RegisterNumber:
-*/
+module syn_counter(out,clk,rst);
+
+input clk,rst;
+
+output reg [3:0]out;
+
+always @ (posedge clk)
+
+begin
+
+if(rst)
+
+out<=0;
+
+else
+
+out <= out+1;
+
+end
+
+endmodule
+
+
+Developed by:JEEVIKA.R
+
+RegisterNumber: 24900508
 
 **RTL LOGIC UP COUNTER**
 
+![image](https://github.com/user-attachments/assets/c29d8186-f5fa-4c61-a8d1-8b892c7bf3f7)
+
 **TIMING DIAGRAM FOR IP COUNTER**
+
+![image](https://github.com/user-attachments/assets/d6070b68-d4f2-49bc-a79a-03ee84e8f087)
 
 **TRUTH TABLE**
 
+![image](https://github.com/user-attachments/assets/ef931058-c7e4-4920-aab3-62689ea5d01a)
+
 **RESULTS**
+
+Thus, the 4 bit synchronous up counter and validate functionality is implemented using Verilog, and its functionality is validated with the truth table and timing diagrams
